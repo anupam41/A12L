@@ -1,5 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
+		
+  <remote  name="blaze"
+	        fetch="https://github.com/ProjectBlaze"
+	        revision="12.1" />
+	        
+	  <remote  name="arrow"
+           fetch="https://github.com/ArrowOS"
+           revision="refs/heads/arrow-12.0" />        
 
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
@@ -1103,5 +1111,10 @@
   <project path="tools/trebuchet" name="platform/tools/trebuchet" groups="tools,cts,pdk,pdk-cw-fs,pdk-fs" />
 
   <repo-hooks in-project="platform/tools/repohooks" enabled-list="pre-upload" />
+  
+  <!-- Project Blaze -->
+  <include name="snippets/remove.xml" />
+  <include name="snippets/blaze.xml" />
+  <include name="snippets/arrow.xml" />
 
 </manifest>
